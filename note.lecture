@@ -1,0 +1,26 @@
+width = LN.getWidth();
+height = LN.getHeight();
+scale = LN.getScale();
+page = LN.getPage();
+wp = width/100;
+hp = height/100;
+LN.setTextSize(30*scale);
+LN.drawText( "pg."+page,2.5*wp,3*hp);
+LN.drawLine(2*wp,6*hp,98*wp,6*hp);
+LN.drawLine(2*wp,98*hp,98*wp,98*hp);
+LN.drawRect(2*wp,1*hp,40*wp,5*hp);
+LN.drawRect(70*wp,1*hp,98*wp,5*hp);
+LN.drawLine(20*wp,6*hp,20*wp,98*hp);
+cnt = 6;
+while (cnt < 98){
+LN.drawLine(2*wp ,cnt* hp,98*wp, cnt*hp );
+LN.drawLine(30*wp ,cnt* hp,30*wp,( cnt+0.3)*hp );
+LN.drawLine(60*wp ,cnt* hp,60*wp,( cnt+0.3)*hp );
+cnt=cnt +(scale*8);
+}
+LN.setStrokeWidth(0.0001 * width);
+cnt = 6+4*scale;
+while (cnt < 98){
+LN.drawLine(2*wp ,cnt* hp,98*wp, cnt*hp );
+cnt=cnt +(scale*8);
+}
